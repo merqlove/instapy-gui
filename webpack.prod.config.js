@@ -20,7 +20,7 @@ module.exports = merge(common, {
 			'CONFIG_ENDPOINT',
 			'AUTH_ENDPOINT',
 			'GA_TRACKING_ID'
-    ]),
+		]),
 		new CleanWebpackPlugin(['dist']),
 		new PurgecssPlugin({
 			paths: glob.sync(path.join(__dirname, 'src') + '/**/*', { nodir: true })
