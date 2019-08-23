@@ -2,7 +2,7 @@ FROM python:3-alpine
 
 WORKDIR /usr/instapy
 
-COPY . .
+COPY ./requirements.txt ./requirements.txt
 
 RUN apk add --update --no-cache --virtual .build-dependencies \
 	python3-dev \
@@ -18,4 +18,7 @@ RUN apk --update --no-cache add \
   chromium-chromedriver
 
 ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
+
+COPY . .
+
 CMD ["python3", "-u", "start.py"]

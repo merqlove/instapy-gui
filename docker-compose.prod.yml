@@ -1,0 +1,153 @@
+version: '3'
+
+volumes:
+  mongo-data:
+    driver: local
+  mongo-config:
+    driver: local
+  socket-data:
+    driver: local
+  auth-data:
+    driver: local
+  config-data:
+    driver: local
+
+services:
+  config:
+    # image: ${DOCKER_REGISTRY}/instapy-config:latest
+    image: felixbreuer/instapy-config:latest
+    restart: unless-stopped
+    networks:
+      - default
+      - front
+    # ports:
+      # - "8004:80"
+    volumes:
+      - config-data:/usr/instapy
+    environment:
+      - MONGO_URL
+      - JWT_SECRET
+      - CIPHER_SECRET
+    depends_on:
+      - mongo
+    labels:
+      traefik.backend: "config"
+      traefik.frontend.rule: "Host:config.instapy.mrcr.ru"
+      traefik.docker.network: "traefik_proxy"
+      traefik.enable: "true"
+      traefik.port: "80"
+      traefik.default.protocol: "http"
+  auth:
+    # image: ${DOCKER_REGISTRY}/instapy-auth:latest
+    image: felixbreuer/instapy-auth:latest
+    restart: unless-stopped
+    networks:
+      - default
+      - front
+    # ports:
+      # - "8005:80"
+    volumes:
+      - auth-data:/usr/instapy
+    environment:
+      - MONGO_URL
+      - JWT_SECRET
+    depends_on:
+      - mongo
+    labels:
+      traefik.backend: "auth"
+      traefik.frontend.rule: "Host:auth.instapy.mrcr.ru"
+      traefik.docker.network: "traefik_proxy"
+      traefik.enable: "true"
+      traefik.port: "80"
+      traefik.default.protocol: "http"
+  socket:
+    image: felixbreuer/instapy-socket:latest
+    restart: unless-stopped
+    networks:
+      - default
+      - front
+    # ports:
+      # - "8006:80"
+    volumes:
+      - socket-data:/usr/instapy
+    environment:
+      - JWT_SECRET
+    depends_on:
+      - mongo
+    labels:
+      traefik.backend: "socket"
+      traefik.frontend.rule: "Host:socket.instapy.mrcr.ru"
+      traefik.docker.network: "traefik_proxy"
+      traefik.enable: "true"
+      traefik.port: "80"
+      traefik.default.protocol: "http"
+  mongo:
+    image: mongodb
+    build: ./mongo
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+      - mongo-config:/data/configdb
+    env_file:
+      - ./mongo.env
+    ports:
+      - 27017:27017
+  client1:
+    env_file:
+      - ./endpoints.env
+      - ./instapy.env
+      - ./instapy1.env
+    image: ${DOCKER_REGISTRY}/instapy-client:latest
+    restart: unless-stopped
+    depends_on:
+      - gui
+  client2:
+    env_file:
+      - ./endpoints.env
+      - ./instapy.env
+      - ./instapy2.env
+    image: ${DOCKER_REGISTRY}/instapy-client:latest
+    restart: unless-stopped
+    depends_on:
+      - gui
+  # mongoku:
+  #   image: "huggingface/mongoku"
+  #   restart: unless-stopped
+  #   networks:
+  #     - default
+  #     - front
+  #   environment:
+  #     - MONGOKU_DEFAULT_HOST=${MONGO_URL}
+  #   depends_on:
+  #     - gui
+  #   labels:
+  #     traefik.backend: "mongoku"
+  #     traefik.frontend.rule: "Host:mongoku.instapy.mrcr.ru"
+  #     traefik.docker.network: "traefik_proxy"
+  #     traefik.enable: "true"
+  #     traefik.port: "3100"
+  #     traefik.default.protocol: "http"
+  gui:
+    image: "${DOCKER_REGISTRY}/instapy-gui:latest"
+    restart: unless-stopped
+    networks:
+      - default
+      - front
+    # ports:
+      # - "8003:80"
+    labels:
+      traefik.backend: "gui"
+      traefik.frontend.rule: "Host:instapy.mrcr.ru"
+      traefik.docker.network: "traefik_proxy"
+      traefik.enable: "true"
+      traefik.port: "80"
+      traefik.default.protocol: "http"
+    depends_on:
+      - config
+      - auth
+      - socket
+
+networks:
+  front:
+    external:
+      name: traefik_proxy

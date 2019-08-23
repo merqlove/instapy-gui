@@ -1,0 +1,1655 @@
+[
+  {
+    "description": "Allows to follow by any scrapped list",
+    "functionName": "follow_by_list",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "followlist",
+        "optional": false,
+        "type": "list"
+      },
+      {
+        "defaultValue": 1,
+        "name": "times",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": 600,
+        "name": "sleep_delay",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "interact",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": null,
+    "functionName": "follow_by_locations",
+    "params": [
+      {
+        "defaultValue": [],
+        "name": "locations",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": 50,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "media",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": true,
+        "name": "skip_top_posts",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": null,
+    "functionName": "follow_by_tags",
+    "params": [
+      {
+        "defaultValue": [],
+        "name": "tags",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": 50,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": true,
+        "name": "skip_top_posts",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "use_smart_hashtags",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "use_smart_location_hashtags",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "media",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": false,
+        "name": "interact",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": "Follows users' commenters ",
+    "functionName": "follow_commenters",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "usernames",
+        "optional": false,
+        "type": "list"
+      },
+      {
+        "defaultValue": 10,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": 365,
+        "name": "daysold",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": 50,
+        "name": "max_pic",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": 600,
+        "name": "sleep_delay",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "interact",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": "Follows users' likers ",
+    "functionName": "follow_likers",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "usernames",
+        "optional": false,
+        "type": "list"
+      },
+      {
+        "defaultValue": 3,
+        "name": "photos_grab_amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": 3,
+        "name": "follow_likers_per_photo",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": true,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": 600,
+        "name": "sleep_delay",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "interact",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": "Follow the `Followers` of given users ",
+    "functionName": "follow_user_followers",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "usernames",
+        "optional": false,
+        "type": "list"
+      },
+      {
+        "defaultValue": 10,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "interact",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": 600,
+        "name": "sleep_delay",
+        "optional": true,
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "description": "Follow the `Following` of given users ",
+    "functionName": "follow_user_following",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "usernames",
+        "optional": false,
+        "type": "list"
+      },
+      {
+        "defaultValue": 10,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "interact",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": 600,
+        "name": "sleep_delay",
+        "optional": true,
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "description": "Interact on posts at given URLs ",
+    "functionName": "interact_by_URL",
+    "params": [
+      {
+        "defaultValue": [],
+        "name": "urls",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": false,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "interact",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": " Like comments of people on posts, reply to them\nand also interact with those commenters",
+    "functionName": "interact_by_comments",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "usernames",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": 10,
+        "name": "posts_amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": 1,
+        "name": "comments_per_post",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "reply",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "interact",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "media",
+        "optional": true,
+        "type": "str"
+      }
+    ]
+  },
+  {
+    "description": "Likes some amounts of images for each usernames",
+    "functionName": "interact_by_users",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "usernames",
+        "optional": false,
+        "type": "list"
+      },
+      {
+        "defaultValue": 10,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "media",
+        "optional": true,
+        "type": "str"
+      }
+    ]
+  },
+  {
+    "description": "Likes some amounts of tagged images for each usernames",
+    "functionName": "interact_by_users_tagged_posts",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "usernames",
+        "optional": false,
+        "type": "list"
+      },
+      {
+        "defaultValue": 10,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "media",
+        "optional": true,
+        "type": "str"
+      }
+    ]
+  },
+  {
+    "description": null,
+    "functionName": "interact_user_followers",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "usernames",
+        "optional": false,
+        "type": "list"
+      },
+      {
+        "defaultValue": 10,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": null,
+    "functionName": "interact_user_following",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "usernames",
+        "optional": false,
+        "type": "list"
+      },
+      {
+        "defaultValue": 10,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": "Like the users feed",
+    "functionName": "like_by_feed",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "kwargs",
+        "optional": false,
+        "type": null
+      }
+    ]
+  },
+  {
+    "description": "Like the users feed",
+    "functionName": "like_by_feed_generator",
+    "params": [
+      {
+        "defaultValue": 50,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "unfollow",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "interact",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": "Likes (default) 50 images per given locations",
+    "functionName": "like_by_locations",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "locations",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": 50,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "media",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": true,
+        "name": "skip_top_posts",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": "Likes (default) 50 images per given tag",
+    "functionName": "like_by_tags",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "tags",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": 50,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": true,
+        "name": "skip_top_posts",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "use_smart_hashtags",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "use_smart_location_hashtags",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "interact",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "media",
+        "optional": true,
+        "type": "str"
+      }
+    ]
+  },
+  {
+    "description": "Likes some amounts of images for each usernames",
+    "functionName": "like_by_users",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "usernames",
+        "optional": false,
+        "type": "list"
+      },
+      {
+        "defaultValue": 10,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "media",
+        "optional": true,
+        "type": "str"
+      }
+    ]
+  },
+  {
+    "description": "Gets the tags from an image and likes 50 images for each tag",
+    "functionName": "like_from_image",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "url",
+        "optional": false,
+        "type": "str"
+      },
+      {
+        "defaultValue": 50,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "media",
+        "optional": true,
+        "type": "str"
+      }
+    ]
+  },
+  {
+    "description": "Set custom sleep delay after actions ",
+    "functionName": "set_action_delays",
+    "params": [
+      {
+        "defaultValue": false,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "like",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "comment",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "follow",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "unfollow",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "random_range_from",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "random_range_to",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": true,
+        "name": "safety_match",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": " Enable/disable blacklist. If enabled, adds users to a blacklist\nafter interact with and adds users to dont_include list",
+    "functionName": "set_blacklist",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "enabled",
+        "optional": false,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "campaign",
+        "optional": false,
+        "type": "str"
+      }
+    ]
+  },
+  {
+    "description": "Set the replies to comments ",
+    "functionName": "set_comment_replies",
+    "params": [
+      {
+        "defaultValue": [],
+        "name": "replies",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": null,
+        "name": "media",
+        "optional": true,
+        "type": "str"
+      }
+    ]
+  },
+  {
+    "description": "Changes the possible comments",
+    "functionName": "set_comments",
+    "params": [
+      {
+        "defaultValue": [],
+        "name": "comments",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": null,
+        "name": "media",
+        "optional": true,
+        "type": "str"
+      }
+    ]
+  },
+  {
+    "description": null,
+    "functionName": "set_delimit_commenting",
+    "params": [
+      {
+        "defaultValue": false,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "max_comments",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "min_comments",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": [],
+        "name": "comments_mandatory_words",
+        "optional": true,
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "description": null,
+    "functionName": "set_delimit_liking",
+    "params": [
+      {
+        "defaultValue": false,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "max_likes",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "min_likes",
+        "optional": true,
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "description": " Defines if images should be commented or not.\nE.g. percentage=25 means every ~4th picture will be commented.",
+    "functionName": "set_do_comment",
+    "params": [
+      {
+        "defaultValue": false,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": 0,
+        "name": "percentage",
+        "optional": true,
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "description": "Defines if the user of the liked image should be followed",
+    "functionName": "set_do_follow",
+    "params": [
+      {
+        "defaultValue": false,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": 0,
+        "name": "percentage",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": 1,
+        "name": "times",
+        "optional": true,
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "description": null,
+    "functionName": "set_do_like",
+    "params": [
+      {
+        "defaultValue": false,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": 0,
+        "name": "percentage",
+        "optional": true,
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "description": "Define if the comments on posts should be replied ",
+    "functionName": "set_do_reply_to_comments",
+    "params": [
+      {
+        "defaultValue": false,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": 0,
+        "name": "percentage",
+        "optional": true,
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "description": "Defines which accounts should not be unfollowed",
+    "functionName": "set_dont_include",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "friends",
+        "optional": true,
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "description": "Changes the possible restriction tags, if one of this\nwords is in the description, the image won't be liked but user\nstill might be unfollowed",
+    "functionName": "set_dont_like",
+    "params": [
+      {
+        "defaultValue": [],
+        "name": "tags",
+        "optional": true,
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "description": "Prevents unfollow followers who have liked one of\nyour latest X posts",
+    "functionName": "set_dont_unfollow_active_users",
+    "params": [
+      {
+        "defaultValue": false,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": 4,
+        "name": "posts",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": 500,
+        "name": "boundary",
+        "optional": true,
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "description": "Ignores the don't likes if the description contains\none of the given words",
+    "functionName": "set_ignore_if_contains",
+    "params": [
+      {
+        "defaultValue": [],
+        "name": "words",
+        "optional": true,
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "description": "Changes the possible restriction to users, if a user who posts\nis one of these, the image won't be liked",
+    "functionName": "set_ignore_users",
+    "params": [
+      {
+        "defaultValue": [],
+        "name": "users",
+        "optional": true,
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "description": "Restrict the description of the image to a character set",
+    "functionName": "set_mandatory_language",
+    "params": [
+      {
+        "defaultValue": false,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": [
+          "LATIN"
+        ],
+        "name": "character_set",
+        "optional": true,
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "description": "Changes the possible restriction tags, if all of this\nhashtags is in the description, the image will be liked",
+    "functionName": "set_mandatory_words",
+    "params": [
+      {
+        "defaultValue": [],
+        "name": "tags",
+        "optional": true,
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "description": "Sets aside QS configuration ANY time in a session",
+    "functionName": "set_quota_supervisor",
+    "params": [
+      {
+        "defaultValue": false,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": [],
+        "name": "sleep_after",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": false,
+        "name": "sleepyhead",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "stochastic_flow",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "notify_me",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "peak_likes_hourly",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "peak_likes_daily",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "peak_comments_hourly",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "peak_comments_daily",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "peak_follows_hourly",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "peak_follows_daily",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "peak_unfollows_hourly",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "peak_unfollows_daily",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "peak_server_calls_hourly",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "peak_server_calls_daily",
+        "optional": true,
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "description": "Sets the potency ratio and limits to the provide an efficient\nactivity between the targeted masses",
+    "functionName": "set_relationship_bounds",
+    "params": [
+      {
+        "defaultValue": false,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "potency_ratio",
+        "optional": true,
+        "type": "float"
+      },
+      {
+        "defaultValue": null,
+        "name": "delimit_by_numbers",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "min_posts",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "max_posts",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "max_followers",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "max_following",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "min_followers",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "min_following",
+        "optional": true,
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "description": null,
+    "functionName": "set_selenium_local_session",
+    "params": []
+  },
+  {
+    "description": "Starts remote session for a selenium server.\nCreates a new selenium driver instance for remote session or uses\nprovided\none. Useful for docker setup.\n\n:param selenium_url: string\n:param selenium_driver: selenium WebDriver\n:return: self",
+    "functionName": "set_selenium_remote_session",
+    "params": [
+      {
+        "defaultValue": "",
+        "name": "selenium_url",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": null,
+        "name": "selenium_driver",
+        "optional": true,
+        "type": null
+      }
+    ]
+  },
+  {
+    "description": "Sets aside simulation parameters ",
+    "functionName": "set_simulation",
+    "params": [
+      {
+        "defaultValue": true,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": 100,
+        "name": "percentage",
+        "optional": true,
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "description": null,
+    "functionName": "set_skip_users",
+    "params": [
+      {
+        "defaultValue": true,
+        "name": "skip_private",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": 100,
+        "name": "private_percentage",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "skip_no_profile_pic",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": 100,
+        "name": "no_profile_pic_percentage",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "skip_business",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": 100,
+        "name": "business_percentage",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": [],
+        "name": "skip_business_categories",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": [],
+        "name": "dont_skip_business_categories",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": false,
+        "name": "skip_non_business",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": null,
+    "functionName": "set_sleep_reduce",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "percentage",
+        "optional": false,
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "description": "Generate smart hashtags based on https://displaypurposes.com/",
+    "functionName": "set_smart_hashtags",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "tags",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": 3,
+        "name": "limit",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": "top",
+        "name": "sort",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": true,
+        "name": "log_tags",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": "Generate smart hashtags based on https://displaypurposes.com/map",
+    "functionName": "set_smart_location_hashtags",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "locations",
+        "optional": false,
+        "type": "list"
+      },
+      {
+        "defaultValue": 10,
+        "name": "radius",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": 3,
+        "name": "limit",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": true,
+        "name": "log_tags",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": null,
+    "functionName": "set_switch_language",
+    "params": [
+      {
+        "defaultValue": true,
+        "name": "option",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": "Defines if the clarifai img api should be used\nWhich 'project' will be used (only 5000 calls per month)\n\nRaises:\n    InstaPyError if os is windows",
+    "functionName": "set_use_clarifai",
+    "params": [
+      {
+        "defaultValue": false,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "api_key",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": [
+          "general"
+        ],
+        "name": "models",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": [],
+        "name": "workflow",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": 0.5,
+        "name": "probability",
+        "optional": true,
+        "type": "float"
+      },
+      {
+        "defaultValue": false,
+        "name": "full_match",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "check_video",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "proxy",
+        "optional": true,
+        "type": "str"
+      }
+    ]
+  },
+  {
+    "description": "Set MeaningCloud Sentiment Analysis API configuration ",
+    "functionName": "set_use_meaningcloud",
+    "params": [
+      {
+        "defaultValue": false,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "license_key",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": "P",
+        "name": "polarity",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": null,
+        "name": "agreement",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": null,
+        "name": "subjectivity",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": 100,
+        "name": "confidence",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": "Set Yandex Translate API configuration ",
+    "functionName": "set_use_yandex",
+    "params": [
+      {
+        "defaultValue": false,
+        "name": "enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "API_key",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": false,
+        "name": "match_language",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": "en",
+        "name": "language_code",
+        "optional": true,
+        "type": "str"
+      }
+    ]
+  },
+  {
+    "description": "Define if posts of given user should be interacted",
+    "functionName": "set_user_interact",
+    "params": [
+      {
+        "defaultValue": 10,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": 100,
+        "name": "percentage",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "randomize",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "media",
+        "optional": true,
+        "type": "str"
+      }
+    ]
+  },
+  {
+    "description": "Unfollows (default) 10 users from your following list",
+    "functionName": "unfollow_users",
+    "params": [
+      {
+        "defaultValue": 10,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": false,
+        "name": "custom_list_enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": [],
+        "name": "custom_list",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": "all",
+        "name": "custom_list_param",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": false,
+        "name": "instapy_followed_enabled",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": "all",
+        "name": "instapy_followed_param",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": false,
+        "name": "nonFollowers",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": false,
+        "name": "allFollowing",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": "FIFO",
+        "name": "style",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": null,
+        "name": "unfollow_after",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": 0,
+        "name": "delay_followbackers",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": 600,
+        "name": "sleep_delay",
+        "optional": true,
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "description": "Accept pending follow requests from activity feed",
+    "functionName": "accept_follow_requests",
+    "params": [
+      {
+        "defaultValue": 100,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": 1,
+        "name": "sleep_delay",
+        "optional": true,
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "description": "Defines the tags the images should be checked for",
+    "functionName": "clarifai_check_img_for",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "tags",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": null,
+        "name": "tags_skip",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": false,
+        "name": "comment",
+        "optional": true,
+        "type": "bool"
+      },
+      {
+        "defaultValue": null,
+        "name": "comments",
+        "optional": true,
+        "type": "list"
+      }
+    ]
+  },
+  {
+    "description": "Likes (default) 50 images per given locations",
+    "functionName": "comment_by_locations",
+    "params": [
+      {
+        "defaultValue": null,
+        "name": "locations",
+        "optional": true,
+        "type": "list"
+      },
+      {
+        "defaultValue": 50,
+        "name": "amount",
+        "optional": true,
+        "type": "int"
+      },
+      {
+        "defaultValue": null,
+        "name": "media",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": true,
+        "name": "skip_top_posts",
+        "optional": true,
+        "type": "bool"
+      }
+    ]
+  },
+  {
+    "description": "Join pods ",
+    "functionName": "join_pods",
+    "params": [
+      {
+        "defaultValue": "general",
+        "name": "topic",
+        "optional": true,
+        "type": "str"
+      },
+      {
+        "defaultValue": "normal",
+        "name": "engagement_mode",
+        "optional": true,
+        "type": "str"
+      }
+    ]
+  }
+]
