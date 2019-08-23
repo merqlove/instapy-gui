@@ -16,10 +16,10 @@ module.exports = merge(common, {
 
 	plugins: [
 		new webpack.EnvironmentPlugin([
-     'SOCKET_ENDPOINT',
-     'CONFIG_ENDPOINT',
-     'AUTH_ENDPOINT',
-     'GA_TRACKING_ID'
+			'SOCKET_ENDPOINT',
+			'CONFIG_ENDPOINT',
+			'AUTH_ENDPOINT',
+			'GA_TRACKING_ID'
     ]),
 		new CleanWebpackPlugin(['dist']),
 		new PurgecssPlugin({

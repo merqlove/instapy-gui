@@ -32,7 +32,7 @@ services:
       - mongo
     labels:
       traefik.backend: "config"
-      traefik.frontend.rule: "Host:config.instapy.mrcr.ru"
+      traefik.frontend.rule: "Host:config.${DOMAIN}"
       traefik.docker.network: "traefik_proxy"
       traefik.enable: "true"
       traefik.port: "80"
@@ -55,7 +55,7 @@ services:
       - mongo
     labels:
       traefik.backend: "auth"
-      traefik.frontend.rule: "Host:auth.instapy.mrcr.ru"
+      traefik.frontend.rule: "Host:auth.${DOMAIN}"
       traefik.docker.network: "traefik_proxy"
       traefik.enable: "true"
       traefik.port: "80"
@@ -76,7 +76,7 @@ services:
       - mongo
     labels:
       traefik.backend: "socket"
-      traefik.frontend.rule: "Host:socket.instapy.mrcr.ru"
+      traefik.frontend.rule: "Host:socket.${DOMAIN}"
       traefik.docker.network: "traefik_proxy"
       traefik.enable: "true"
       traefik.port: "80"
@@ -137,7 +137,7 @@ services:
       # - "8003:80"
     labels:
       traefik.backend: "gui"
-      traefik.frontend.rule: "Host:instapy.mrcr.ru"
+      traefik.frontend.rule: "Host:${DOMAIN}"
       traefik.docker.network: "traefik_proxy"
       traefik.enable: "true"
       traefik.port: "80"
